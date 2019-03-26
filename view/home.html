@@ -1,0 +1,13 @@
+
+<div class="cards card-deck" ng-controller="sortController"
+ng-repeat="product in products | orderBy:sortColumn | filter: searchText | limitTo:rowLimits">
+<img class="card-img-top" src="../image/card.png" alt="Card image cap">
+<div class="card-body">
+    <h5 class="card-title1">{{ product.productname }}</h5>
+    <p class="card-text orange">{{ product.price | currency }}
+        <small class="text-muted"><i class="fas fa-star yellow star first-star"></i><i
+                class="fas fa-star yellow star"></i><i class="fas fa-star yellow star"></i><i
+                class="fas fa-star yellow star"></i><i class="fas fa-star yellow star"></i></small>
+    </p>
+</div>
+</div>
