@@ -17,33 +17,28 @@ app.config(function ($routeProvider) {
 
 app.controller("sortController", function ($scope) {
 
+    const starsTotal = 5;
+
     var products = [
-        { productname: "Apple iPhone 7", category: "Mobiltelefon", shortdescription: "32GB Svart", price: 4299, instock: 100, instockdate: new Date("2019-03-01") },
-        { productname: "HP Probook 640 G4", category: "Bärbar", shortdescription: "HP Probook 640 G4", price: 8490, instock: 100, instockdate: new Date("2019-03-01") },
-        { productname: "Lenovo ThinkCentre M710q Tiny", category: "Dator", shortdescription: "Core i5 8GB 256GB SSD", price: 5990, instock: 90, instockdate: new Date("2019-03-01") },
-        { productname: "Dell UltraSharp U2412M Svart", category: "Skärm", shortdescription: "24", price: 2290, instock: 10, instockdate: new Date("2019-03-02") },
-        { productname: "HP Probook 650 G4", category: "Bärbar", shortdescription: "Core i5 8GB 256GB SSD 15.6", price: 8490, instock: 80, instockdate: new Date("2019-03-02") },
-        { productname: "Lenovo ThinkVision P27q", category: "Skärm", shortdescription: "27 2560 x 1440 16:9", price: 3190, instock: 14, instockdate: new Date("2019-03-01") },
-        { productname: "Dell UltraSharp U2417H Infinity", category: "Skärm", shortdescription: "23.8 1920 x 1080 16:9", price: 2390, instock: 100, instockdate: new Date("2019-03-04") },
-        { productname: "Apple iPhone 8", category: "Mobiltelefon", shortdescription: "64GB Rymdgrå", price: 6990, instock: 100, instockdate: new Date("2019-03-02") },
-        { productname: "Dell UltraSharp U2412M Svart", category: "Skärm", shortdescription: "24 1920 x 1200 16:10", price: 2290, instock: 100, instockdate: new Date("2019-03-05") },
-        { productname: "Logitech MX Master for Business", category: "Datormus", shortdescription: "Laser 1600dpi Mus Svart", price: 699, instock: 70, instockdate: new Date("2019-03-01") },
-        { productname: "Dell UltraSharp U2412M Svart", category: "Skärm", shortdescription: "24 1920 x 1200 16:10", price: 2290, instock: 100, instockdate: new Date("2019-03-05") },
-        { productname: "Logitech MX Master for Business", category: "Datormus", shortdescription: "Laser 1600dpi Mus Svart", price: 699, instock: 70, instockdate: new Date("2019-03-01") }
+        { productname: "...får leken tåla", authour: "MJ Arldige", category: "Pocket", price: 54, rating: 5.0 },
+        { productname: "Allt jag fått lära mig", authour: "Tara Westover", category: "Inbunden", price: 179, rating: 3 },
+        { productname: "En bur av guld", authour: "Camilla Läckberg", category: "Inbunden", price: 175, rating: 2.0  },
+        { productname: "En underbar död", authour:"Emma Ångström", category: "Inbunden", price: 149, rating: 1.2 },
+        { productname: "Lazarus", authour: "Lars Kepler", category: "Ljudbok", price: 106, rating: 4.0 },
+        { productname: "1793", authour: "Niklas Natt och Dag", category: "Ljudbok", price: 71, rating: 3.8  },
+        { productname: "Min historia", authour: "Michelle Obama", category: "E-bok", price: 98,rating: 4.2  },
+        { productname: "Bränn alla mina brev", authour: "Alex Schulman", category: "E-bok", price: 147, rating: 1.2  },
+        { productname: "En mors bekännelse", authour: "Kelly Rimmer", category: "Pocket", price: 59, rating: 4.7  },
+        { productname: "Saknad, förmodad död", authour: "Susie Steiner", category: "Pocket", price: 57, rating: 2.0  },
+        { productname: "Isfiskaren", authour: "Anna Ihrén", category: "Pocket", price: 54, rating: 4.9  },
+        { productname: "Fyrmästaren", authour: "Anna Ihrén", category: "Pocket", price: 54, rating: 1.8  }
     ];
 
     $scope.products = products;
-    //$scope.sortColumn = "productname";
-
-
-
-
-
-
+    $scope.rating = function(input) {
+        return `${Math.round(((input / starsTotal) * 100) / 10) * 10}%`;
+    } 
 
 });
 
 
-
-
-/*slut sortera efter*/
