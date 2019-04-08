@@ -38,6 +38,18 @@
 .navbar-mail {
     color: #ffffff;
     font-size: 12px;
+    margin-left: 200px;
+}
+
+.login {
+    color: #ffffff;
+    font-size: 12px;
+
+}
+
+.reg {
+    color: #ffffff;
+    font-size: 12px;
     margin-right: 100px;
 }
 
@@ -130,6 +142,8 @@ header li {
     margin-left: 900px;
     margin-top: -30px;
 }
+
+
 /*header end*/
 
 /*slideshow start*/
